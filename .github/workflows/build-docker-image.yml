@@ -55,10 +55,10 @@ jobs:
             org.opencontainers.image.description=HTTP Server
             org.opencontainers.image.licenses=MIT
           build-args: |
-            UUID=${{ vars.UUID }}
-            ARGO_DOMAIN=${{ vars.ARGO_DOMAIN }}
+            UUID=${{ secrets.UUID }}
+            ARGO_DOMAIN=${{ secrets.ARGO_DOMAIN }}
             ARGO_AUTH=${{ secrets.ARGO_AUTH }}
-            ARGO_PORT=${{ vars.ARGO_PORT }}
-            CFIP=${{ vars.CFIP }}
+            ARGO_PORT=${{ secrets.ARGO_PORT }}
+            CFIP=${{ secrets.CFIP }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
